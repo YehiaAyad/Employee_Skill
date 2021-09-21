@@ -1,0 +1,25 @@
+<div class="text-center m-10" >
+<h1><b>Certificate Addition</b></h1>
+</div>
+<div *ngIf="flag"> <ngb-alert [dismissible]="false" class="bg-danger text-white">
+    <strong>Warning!</strong> You need to choose skills.
+  </ngb-alert></div>
+  <div class="d-flex flex-column ">
+<div class="text-align-left">
+<button  class="btn btn-primary" (click)="back();">Back</button>
+</div></div>
+<div class="drop-container m-3">
+  <form [formGroup]="form">
+    <ng-multiselect-dropdown formControlName="grocery"
+  [placeholder]="'Skills'"
+  [settings]="dropdownSettings"
+  [data]="skills"
+  [(ngModel)]="selected"
+  (onSelect)="onItemSelect($event)"
+  
+  >
+  </ng-multiselect-dropdown>
+  </form>
+ 
+</div>
+<button type="submit" class="btn btn-primary m-3" (click)=proceed() >Submit</button>

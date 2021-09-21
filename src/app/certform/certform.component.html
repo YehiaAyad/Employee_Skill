@@ -1,0 +1,37 @@
+<div class="text-center m-10" >
+<h1><b>Certificate Addition</b></h1>
+</div>
+<div *ngIf="flag"> <ngb-alert [dismissible]="false" class="bg-danger text-white">
+    <strong>Warning!</strong> You need to choose skills.
+  </ngb-alert></div>
+<div class="d-flex flex-column border border-dark">
+<div class="text-align-left">
+<button  class="btn btn-primary" (click)="back();">Back</button>
+</div>
+<div class="d-flex flex-column justify-content-center p-3 m-2 flex-md-row flex-lg-row flex-xl-row align-items-center">
+<img class="p-3 mb-3 img-fluid" style="max-width:291px" src="https://www.pinclipart.com/picdir/big/217-2173105_community-pictures-clip-art.png" alt="certificate. Pic">
+<div class="d-flex flex-column align-items-center">
+
+<label for="exampleInputPassword1" class="m-4">Employee's Name</label>
+    <input type="number" class="form-control mb-2" id="Password1"   placeholder="{{employee.name}}" readonly>
+  
+
+  
+  <mat-form-field appearance="fill" class="bg-white p-1 m-2">
+    <mat-label>Skill</mat-label>
+    <mat-select [formControl]="selectedValue" multiple>
+      <div *ngFor="let skill of skills" >
+      <mat-option [value]="skill.id" *ngIf="getname(skill.id)"  >
+       {{skill.skill_Name}}
+      </mat-option>
+      <mat-option [value]="skill.id" *ngIf="!getname(skill.id)" >
+       {{skill.skill_Name}}
+      </mat-option>
+      </div>
+    </mat-select>
+  </mat-form-field>
+
+  <button type="submit" class="btn btn-primary m-3" (click)=proceed() >Submit</button>
+
+</div>
+</div>

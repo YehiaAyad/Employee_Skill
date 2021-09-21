@@ -1,0 +1,16 @@
+[{
+        "id": 1,
+        "employeeId": 1,
+        "skillId": 1
+
+
+    },
+    {
+        "id": 2,
+        "employeeId": 1,
+        "skillId": 3
+
+
+    }
+
+]

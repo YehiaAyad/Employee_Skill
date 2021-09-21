@@ -1,0 +1,21 @@
+<p class="h1 text-center text-"><b>ENTER YOUR ID</b></p>
+<hr>
+<div *ngIf="flag"> <ngb-alert [dismissible]="false" class="bg-danger text-white">
+    <strong>Warning!</strong> Input a Valid ID
+  </ngb-alert></div>
+
+<div class="d-flex flex-column border border-dark">
+<div class="text-align-left">
+<button  class="btn btn-primary" (click)="mainmenu();">Back</button>
+</div>
+<div class="d-flex flex-column justify-content-center p-3 mb-2 flex-md-row flex-lg-row flex-xl-row align-items-center">
+<img class="p-3 mb-3 img-fluid" style="max-width:291px" src="https://www.pinclipart.com/picdir/big/551-5516286_name-tag-clip-art.png" alt="Employee Pic">
+<div class="d-flex flex-column align-items-center">
+  <div class="form-group">
+    <label for="exampleInputPassword1">EMPLOYEE'S ID</label>
+    <input #box type="number" class="form-control mb-2" id="Password1"   placeholder="EMPLOYEE'S ID">
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="proceed(box.value)">Submit</button>
+</div>
+</div>
