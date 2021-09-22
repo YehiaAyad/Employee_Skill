@@ -63,7 +63,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ZeroComponent } from './zero/zero.component';
 import { RouterOutlet } from '@angular/router';
 import { TrialComponent } from './trial/trial.component';
-import { DxTagBoxModule, DxTemplateModule } from 'devextreme-angular';
 import { LoadingComponent } from './loading/loading.component';
 import { CommonModule } from '@angular/common';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
@@ -137,8 +136,6 @@ import { FormBuilder } from '@angular/forms';
     HttpClientModule,
     MatNativeDateModule,
     ReactiveFormsModule, BrowserModule,
-    DxTemplateModule,
-    DxTagBoxModule,
     NgMultiSelectDropDownModule   ,NgMultiSelectDropDownModule.forRoot() 
   ],
   providers: [],
